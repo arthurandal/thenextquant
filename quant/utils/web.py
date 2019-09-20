@@ -200,6 +200,7 @@ class Websocket:
             elif msg.type == aiohttp.WSMsgType.CLOSED:
                 logger.warn("receive event CLOSED:", msg, caller=self)
                 SingleTask.run(self._reconnect)
+                return        
             elif msg.type == aiohttp.WSMsgType.ERROR:
                 logger.error("receive event ERROR:", msg, caller=self)
             else:
