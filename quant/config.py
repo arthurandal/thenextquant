@@ -105,7 +105,7 @@ class Config:
         self.redis = update_fields.get("REDIS", None)
         self.platforms = update_fields.get("PLATFORMS", {})
         self.accounts = update_fields.get("ACCOUNTS", [])
-        self.markets = update_fields.get("MARKETS", [])
+        self.markets = update_fields.get("MARKETS", {})
         self.heartbeat = update_fields.get("HEARTBEAT", {})
         self.proxy = update_fields.get("PROXY", None)
 
